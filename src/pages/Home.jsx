@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { Heart, Users, BookOpen, Utensils } from 'lucide-react';
+import heroImage from '../assets/home/Slides_site_.avif';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,6 +41,7 @@ const Counter = ({ end, label, icon: Icon, color }) => {
 
 const Home = () => {
     const heroRef = useRef();
+    const [isVideoPlaying, setIsVideoPlaying] = React.useState(false);
 
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
@@ -62,7 +64,23 @@ const Home = () => {
                     opacity: 0,
                     duration: 0.5,
                     ease: "back.out(1.7)"
-                }, "-=0.3");
+                }, "-=0.3")
+                .from(".hero-image-reveal", {
+                    clipPath: "inset(100% 0% 0% 0%)",
+                    y: 50,
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: "power2.out"
+                }, "-=0.8");
+
+            // Floating animation for the image
+            gsap.to(".hero-image-float", {
+                y: -15,
+                duration: 2.5,
+                ease: "sine.inOut",
+                repeat: -1,
+                yoyo: true
+            });
 
             // Shared section animation
             gsap.from(".section-title", {
@@ -105,14 +123,13 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className="relative hero-text">
-                        <div className="aspect-square bg-slate-200 rounded-[3rem] overflow-hidden shadow-2xl relative">
-                            {/* Placeholder for impact image */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-institutional-blue/20 to-transparent"></div>
+                    <div className="relative hero-image-reveal">
+                        <div className="aspect-square bg-slate-200 rounded-[3rem] overflow-hidden shadow-2xl relative hero-image-float">
+                            <div className="absolute inset-0 bg-gradient-to-br from-institutional-blue/10 to-transparent"></div>
                             <img
-                                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                                src={heroImage}
                                 alt="Impacto Social"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover scale-105"
                             />
                         </div>
                         <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100">
@@ -149,6 +166,52 @@ const Home = () => {
                 </div>
             </section>
 
+            {/* Video Section */}
+            <section className="py-24 bg-white">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-12 section-title">
+                        <h2 className="text-3xl md:text-5xl font-bold text-institutional-blue mb-4">
+                            Nossa Missão em Movimento
+                        </h2>
+                        <p className="text-lg text-slate-500">Assista ao nosso vídeo institucional e conheça de perto o trabalho do ICP.</p>
+                    </div>
+
+                    <div className="section-title relative aspect-video bg-slate-900 rounded-[2rem] overflow-hidden shadow-2xl shadow-slate-200 group">
+                        {!isVideoPlaying ? (
+                            <div
+                                className="absolute inset-0 cursor-pointer flex items-center justify-center"
+                                onClick={() => setIsVideoPlaying(true)}
+                            >
+                                {/* Thumbnail Background */}
+                                <img
+                                    src="https://img.youtube.com/vi/YIhFRO09IKA/maxresdefault.jpg"
+                                    alt="Thumbnail Vídeo Institucional"
+                                    className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                                />
+
+                                {/* Institutional Overlay */}
+                                <div className="absolute inset-0 bg-institutional-blue/20 group-hover:bg-institutional-blue/10 transition-colors duration-500"></div>
+
+                                {/* Play Button */}
+                                <div className="relative z-10 w-24 h-24 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 transform group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                                    <div className="w-0 h-0 border-t-[12px] border-t-transparent border-l-[22px] border-l-white border-b-[12px] border-b-transparent ml-2"></div>
+                                </div>
+                            </div>
+                        ) : (
+                            /* Actual YouTube Embed */
+                            <iframe
+                                className="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/YIhFRO09IKA?autoplay=1"
+                                title="Vídeo Institucional ICP"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                            ></iframe>
+                        )}
+                    </div>
+                </div>
+            </section>
+
             {/* Actions Summary */}
             <section className="py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -179,7 +242,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
         </div>
     );
 };
