@@ -42,7 +42,7 @@ const Navbar = () => {
         { name: 'Transparência', path: '/transparencia' },
         { name: 'Como Ajudar / Doações', path: '/doar' },
         { name: 'Eventos Beneficentes', path: '/eventos' },
-        { name: 'Seja um Voluntário', path: '/voluntariado' },
+        { name: 'Editais', path: '/editais' },
         { name: 'Parceiros e Empresas', path: '/parceiros' },
         { name: 'Contato', path: '/contato' },
     ];

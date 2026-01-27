@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import {
   QuemSomos, Educacao, Esportes, Culinaria,
   ApoioPsicologico, Cursos, Transparencia,
-  Doar, Eventos, Voluntariado, Parceiros, Contato
+  Doar, Eventos, Editais, Parceiros, Contato
 } from './pages';
 import { useEffect } from 'react';
 
@@ -37,7 +37,7 @@ function App() {
             <Route path="/transparencia" element={<Transparencia />} />
             <Route path="/doar" element={<Doar />} />
             <Route path="/eventos" element={<Eventos />} />
-            <Route path="/voluntariado" element={<Voluntariado />} />
+            <Route path="/editais" element={<Editais />} />
             <Route path="/parceiros" element={<Parceiros />} />
             <Route path="/contato" element={<Contato />} />
           </Routes>

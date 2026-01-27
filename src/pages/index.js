@@ -7,12 +7,12 @@ import Cursos from './Cursos';
 import Transparencia from './Transparencia';
 import Doar from './Doar';
 import Eventos from './Eventos';
-import Voluntariado from './Voluntariado';
+import Editais from './Editais';
 import Parceiros from './Parceiros';
 import Contato from './Contato';
 
 export {
     QuemSomos, Educacao, Esportes, Culinaria,
     ApoioPsicologico, Cursos, Transparencia,
-    Doar, Eventos, Voluntariado, Parceiros, Contato
+    Doar, Eventos, Editais, Parceiros, Contato
 };
