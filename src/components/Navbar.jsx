@@ -1,0 +1,141 @@
+import React, { useState, useLayoutEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Menu, X, Heart } from 'lucide-react';
+import gsap from 'gsap';
+
+const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef();
+    const navRef = useRef();
+
+    useLayoutEffect(() => {
+        let ctx = gsap.context(() => {
+            if (isDropdownOpen) {
+                gsap.to(dropdownRef.current, {
+                    opacity: 1,
+                    y: 0,
+                    display: 'block',
+                    duration: 0.3,
+                    ease: 'power2.out'
+                });
+            } else {
+                gsap.to(dropdownRef.current, {
+                    opacity: 0,
+                    y: -10,
+                    display: 'none',
+                    duration: 0.2,
+                    ease: 'power2.in'
+                });
+            }
+        }, navRef);
+        return () => ctx.revert();
+    }, [isDropdownOpen]);
+
+    const actingRoutes = [
+        { name: 'Quem Somos', path: '/quem-somos' },
+        { name: 'Educação', path: '/educacao' },
+        { name: 'Esportes', path: '/esportes' },
+        { name: 'Culinária Social', path: '/culinaria' },
+        { name: 'Apoio Psicológico', path: '/apoio-psicologico' },
+        { name: 'Cursos Profissionalizantes', path: '/cursos' },
+        { name: 'Transparência', path: '/transparencia' },
+        { name: 'Como Ajudar / Doações', path: '/doar' },
+        { name: 'Eventos Beneficentes', path: '/eventos' },
+        { name: 'Seja um Voluntário', path: '/voluntariado' },
+        { name: 'Parceiros e Empresas', path: '/parceiros' },
+        { name: 'Contato', path: '/contato' },
+    ];
+
+    return (
+        <nav ref={navRef} className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between h-20 items-center">
+                    {/* Logo */}
+                    <Link to="/" className="flex items-center">
+                        <img
+                            src="/logo.avif"
+                            alt="ICP Logo"
+                            className="h-16 w-auto object-contain hover:scale-105 transition-transform"
+                        />
+                    </Link>
+
+                    {/* Desktop Menu */}
+                    <div className="hidden md:flex items-center space-x-8">
+                        <Link to="/" className="text-slate-600 hover:text-institutional-blue font-medium transition-colors">Home</Link>
+
+                        <div
+                            className="relative group"
+                            onMouseEnter={() => setIsDropdownOpen(true)}
+                            onMouseLeave={() => setIsDropdownOpen(false)}
+                        >
+                            <button className="flex items-center text-slate-600 hover:text-institutional-blue font-medium transition-colors py-8">
+                                Nossa Atuação <ChevronDown className={`ml-1 w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                            </button>
+
+                            <div
+                                ref={dropdownRef}
+                                className="absolute top-full left-0 w-64 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden hidden opacity-0 -translate-y-2"
+                            >
+                                <div className="py-3 px-2 grid grid-cols-1 gap-1">
+                                    {actingRoutes.map((route) => (
+                                        <Link
+                                            key={route.path}
+                                            to={route.path}
+                                            className="px-4 py-2 text-sm text-slate-600 hover:bg-slate-50 hover:text-institutional-blue rounded-xl transition-all"
+                                        >
+                                            {route.name}
+                                        </Link>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+
+                        <Link to="/doar" className="bg-institutional-orange hover:bg-orange-600 text-white px-6 py-3 rounded-full font-bold flex items-center space-x-2 transition-all hover:scale-105 shadow-lg shadow-orange-200">
+                            <Heart className="w-4 h-4" />
+                            <span>DOE AGORA</span>
+                        </Link>
+                    </div>
+
+                    {/* Mobile toggle */}
+                    <div className="md:hidden flex items-center">
+                        <button onClick={() => setIsOpen(!isOpen)} className="text-slate-600 p-2">
+                            {isOpen ? <X /> : <Menu />}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            {/* Mobile Menu */}
+            {isOpen && (
+                <div className="md:hidden bg-white border-b border-slate-100 max-h-[80vh] overflow-y-auto">
+                    <div className="px-4 pt-2 pb-6 space-y-2">
+                        <Link to="/" className="block px-4 py-3 text-slate-600 font-medium">Home</Link>
+                        <div className="px-4 py-3 font-bold text-institutional-blue bg-slate-50 rounded-xl">Nossa Atuação</div>
+                        <div className="pl-6 space-y-1">
+                            {actingRoutes.map((route) => (
+                                <Link
+                                    key={route.path}
+                                    to={route.path}
+                                    className="block px-4 py-2 text-slate-500 hover:text-institutional-blue transition-colors"
+                                    onClick={() => setIsOpen(false)}
+                                >
+                                    {route.name}
+                                </Link>
+                            ))}
+                        </div>
+                        <Link
+                            to="/doar"
+                            className="mt-4 block bg-institutional-orange text-white text-center px-6 py-4 rounded-xl font-bold"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            DOE AGORA
+                        </Link>
+                    </div>
+                </div>
+            )}
+        </nav>
+    );
+};
+
+export default Navbar;

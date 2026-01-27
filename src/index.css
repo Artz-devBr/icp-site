@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --institutional-blue: #1E3A8A;
+  --institutional-orange: #F97316;
+}
+
+body {
+  @apply bg-social-clean;
+  overflow-x: hidden;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, var(--institutional-blue), var(--institutional-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-100;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-institutional-blue/30 rounded-full transition-colors;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-institutional-blue/50;
+}
