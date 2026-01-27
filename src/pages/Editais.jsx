@@ -1,15 +1,15 @@
 // Workflow GIT:
 // Fazer o Fork.
-// Criar a branch: git checkout -b feature/pagina-culinaria-nomedoaluno.
-// Desenvolver apenas dentro do arquivo src/pages/Culinaria.jsx.
+// Criar a branch: git checkout -b feature/pagina-editais-nomedoaluno.
+// Desenvolver apenas dentro do arquivo src/pages/Editais.jsx.
 // Adicionar, comitar e fazer o Push.
 // Fazer o Pull Request para o repositório original.
 
 import React from 'react';
 import Template from './Template';
 
-const Culinaria = () => (
-    <Template title="Culinária Social">
+const Editais = () => (
+    <Template title="Editais">
         <div className="space-y-6">
             <p className="text-lg text-slate-600 leading-relaxed">
                 Esta página está sendo preparada para mostrar o impacto do <strong>Instituto Casa do Pai</strong> nesta área.
@@ -27,4 +27,4 @@ const Culinaria = () => (
     </Template>
 );
 
-export default Culinaria;
+export default Editais;

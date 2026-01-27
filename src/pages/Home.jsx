@@ -2,8 +2,14 @@ import React, { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { Heart, Users, BookOpen, Utensils } from 'lucide-react';
+import { Heart, Users, BookOpen, Utensils, Pointer } from 'lucide-react';
 import heroImage from '../assets/home/background.avif';
+import governoBrasil from '../assets/home/governodobrasil.png';
+import governoRJ from '../assets/home/governodorj.png';
+import receitaFederal from '../assets/home/receitafederal.png';
+import rvContabilidade from '../assets/home/rvcontabilidade.png';
+import ufrrj from '../assets/home/ufrrj.png';
+import vale from '../assets/home/vale.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,9 +120,19 @@ const Home = () => {
                 </div>
 
                 {/* Scroll Indicator */}
-                <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 hero-content">
-                    <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
-                        <div className="w-1 h-2 bg-white rounded-full animate-bounce"></div>
+                {/* Scroll Indicator */}
+                <div className="absolute bottom-10 md:bottom-32 left-1/2 transform -translate-x-1/2 hero-content">
+                    {/* Desktop Mouse Animation */}
+                    <div className="hidden md:flex flex-col items-center gap-2">
+                        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
+                            <div className="w-1 h-2 bg-white rounded-full animate-bounce"></div>
+                        </div>
+                    </div>
+
+                    {/* Mobile Finger Animation */}
+                    <div className="flex md:hidden flex-col items-center gap-2 animate-bounce">
+                        <Pointer className="w-8 h-8 text-white/80" />
+                        <span className="text-white/60 text-xs">Deslize</span>
                     </div>
                 </div>
             </section>
@@ -213,6 +229,29 @@ const Home = () => {
                             </div>
                             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Sponsors Section */}
+            <section className="py-24 bg-slate-50 relative z-20">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-16 section-title">
+                        <h2 className="text-3xl md:text-5xl font-bold text-institutional-blue mb-4">
+                            Nossos Parceiros
+                        </h2>
+                        <p className="text-lg text-slate-500">
+                            Quem caminha conosco nessa jornada de transformação.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                        <img src={governoBrasil} alt="Governo do Brasil" className="h-25 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src={governoRJ} alt="Governo do Rio de Janeiro" className="h-30 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src={receitaFederal} alt="Receita Federal" className="h-20 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src={rvContabilidade} alt="RV Contabilidade" className="h-16.3 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src={ufrrj} alt="UFRRJ" className="h-22 object-contain hover:scale-110 transition-transform duration-300" />
+                        <img src={vale} alt="Vale" className="h-30 object-contain hover:scale-110 transition-transform duration-300" />
                     </div>
                 </div>
             </section>

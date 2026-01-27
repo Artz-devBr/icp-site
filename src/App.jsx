@@ -4,9 +4,10 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import {
-  QuemSomos, Educacao, Esportes, Culinaria,
+  QuemSomos, Educacao, Esportes, Castracao,
   ApoioPsicologico, Cursos, Transparencia,
-  Doar, Eventos, Voluntariado, Parceiros, Contato
+  Doar, Eventos, Editais, Parceiros, Contato,
+  Empreendedorismo, EducacaoCultura, Tecnologia, EsporteSaude
 } from './pages';
 import { useEffect } from 'react';
 
@@ -31,15 +32,19 @@ function App() {
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/educacao" element={<Educacao />} />
             <Route path="/esportes" element={<Esportes />} />
-            <Route path="/culinaria" element={<Culinaria />} />
+            <Route path="/castracao" element={<Castracao />} />
             <Route path="/apoio-psicologico" element={<ApoioPsicologico />} />
             <Route path="/cursos" element={<Cursos />} />
             <Route path="/transparencia" element={<Transparencia />} />
             <Route path="/doar" element={<Doar />} />
             <Route path="/eventos" element={<Eventos />} />
-            <Route path="/voluntariado" element={<Voluntariado />} />
+            <Route path="/editais" element={<Editais />} />
             <Route path="/parceiros" element={<Parceiros />} />
             <Route path="/contato" element={<Contato />} />
+            <Route path="/empreendedorismo" element={<Empreendedorismo />} />
+            <Route path="/educacao-cultura" element={<EducacaoCultura />} />
+            <Route path="/tecnologia" element={<Tecnologia />} />
+            <Route path="/esporte-saude" element={<EsporteSaude />} />
           </Routes>
         </main>
         <Footer />

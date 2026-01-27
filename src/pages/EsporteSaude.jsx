@@ -1,15 +1,15 @@
 // Workflow GIT:
 // Fazer o Fork.
-// Criar a branch: git checkout -b feature/pagina-voluntariado-nomedoaluno.
-// Desenvolver apenas dentro do arquivo src/pages/Voluntariado.jsx.
+// Criar a branch: git checkout -b feature/pagina-esporte-saude-nomedoaluno.
+// Desenvolver apenas dentro do arquivo src/pages/EsporteSaude.jsx.
 // Adicionar, comitar e fazer o Push.
 // Fazer o Pull Request para o repositório original.
 
 import React from 'react';
 import Template from './Template';
 
-const Voluntariado = () => (
-    <Template title="Seja um Voluntário">
+const EsporteSaude = () => (
+    <Template title="Esporte e Saúde">
         <div className="space-y-6">
             <p className="text-lg text-slate-600 leading-relaxed">
                 Esta página está sendo preparada para mostrar o impacto do <strong>Instituto Casa do Pai</strong> nesta área.
@@ -27,4 +27,4 @@ const Voluntariado = () => (
     </Template>
 );
 
-export default Voluntariado;
+export default EsporteSaude;
