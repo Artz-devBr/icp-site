@@ -17,10 +17,10 @@ import {
 import Template from './Template';
 
 // Imagens da galeria
-import salaAula from '../assets/icp-logo-transparencia.jpg';
-import informaticaCurso from '../assets/icp-logo-transparencia.jpg';
-import programacaoAula from '../assets/icp-logo-transparencia.jpg';
-import roboticaInstitucional from '../assets/icp-logo-transparencia.jpg';
+import salaAula from '../assets/EducacaoCultura/sala-aula.jpg';
+import informaticaCurso from '../assets/EducacaoCultura/informatica-curso.jpg';
+import programacaoAula from '../assets/EducacaoCultura/programacao-aula.jpg';
+import roboticaInstitucional from '../assets/EducacaoCultura/robotica-institucional.jpg';
 
 // Estilos CSS para efeito de folha de caderno
 const notebookStyles = {
