@@ -73,7 +73,7 @@ const QuemSomos = () => {
                 {/* 1. Header Hero Minimalista */}
                 <section ref={heroRef} className="text-center space-y-8">
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-institutional-blue/5 text-institutional-blue rounded-full text-sm font-bold tracking-wide uppercase">
-                        <Heart className="w-4 h-4 fill-current" /> Nossa História
+                        <Heart className="w-4 h-4" /> Nossa História
                     </div>
                     <h1 className="text-4xl md:text-6xl font-black text-slate-800 leading-tight">
                         Há 18 anos,<br />
