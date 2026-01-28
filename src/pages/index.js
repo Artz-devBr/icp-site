@@ -1,6 +1,5 @@
 import QuemSomos from './QuemSomos';
 import Educacao from './Educacao';
-import Esportes from './Esportes';
 import Castracao from './Castracao';
 import ApoioPsicologico from './ApoioPsicologico';
 import Cursos from './Cursos';
@@ -16,7 +15,7 @@ import Tecnologia from './Tecnologia';
 import EsporteSaude from './EsporteSaude';
 
 export {
-    QuemSomos, Educacao, Esportes, Castracao,
+    QuemSomos, Educacao, Castracao,
     ApoioPsicologico, Cursos, Transparencia,
     Doar, Eventos, Editais, Parceiros, Contato,
     Empreendedorismo, EducacaoCultura, Tecnologia, EsporteSaude

@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import {
-  QuemSomos, Educacao, Esportes, Castracao,
+  QuemSomos, Educacao, Castracao,
   ApoioPsicologico, Cursos, Transparencia,
   Doar, Eventos, Editais, Parceiros, Contato,
   Empreendedorismo, EducacaoCultura, Tecnologia, EsporteSaude
@@ -31,7 +31,6 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/educacao" element={<Educacao />} />
-            <Route path="/esportes" element={<Esportes />} />
             <Route path="/castracao" element={<Castracao />} />
             <Route path="/apoio-psicologico" element={<ApoioPsicologico />} />
             <Route path="/cursos" element={<Cursos />} />

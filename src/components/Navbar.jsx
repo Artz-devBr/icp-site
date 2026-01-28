@@ -64,14 +64,14 @@ const Navbar = () => {
     const actingRoutes = [
         { name: 'Quem Somos', path: '/quem-somos' },
         { name: 'Educação', path: '/educacao' },
-        { name: 'Esportes', path: '/esportes' },
-        { name: 'Castração', path: '/castracao' },
+        { name: 'Esporte e Saúde', path: '/esporte-saude' },
+        { name: 'Culinária Social', path: '/culinaria' },
         { name: 'Apoio Psicológico', path: '/apoio-psicologico' },
         { name: 'Cursos Profissionalizantes', path: '/cursos' },
         { name: 'Transparência', path: '/transparencia' },
         { name: 'Como Ajudar / Doações', path: '/doar' },
         { name: 'Eventos Beneficentes', path: '/eventos' },
-        { name: 'Editais', path: '/editais' },
+        { name: 'Seja um Voluntário', path: '/voluntariado' },
         { name: 'Parceiros e Empresas', path: '/parceiros' },
         { name: 'Contato', path: '/contato' },
     ];
