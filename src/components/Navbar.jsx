@@ -62,17 +62,10 @@ const Navbar = () => {
     ];
 
     const actingRoutes = [
-        { name: 'Quem Somos', path: '/quem-somos' },
-        { name: 'Educação', path: '/educacao' },
-        { name: 'Esportes', path: '/esportes' },
-        { name: 'Castração', path: '/castracao' },
-        { name: 'Apoio Psicológico', path: '/apoio-psicologico' },
-        { name: 'Cursos Profissionalizantes', path: '/cursos' },
         { name: 'Transparência', path: '/transparencia' },
-        { name: 'Como Ajudar / Doações', path: '/doar' },
-        { name: 'Eventos Beneficentes', path: '/eventos' },
-        { name: 'Editais', path: '/editais' },
+        { name: 'Eventos', path: '/eventos' },
         { name: 'Parceiros e Empresas', path: '/parceiros' },
+        { name: 'Editais', path: '/editais' },
         { name: 'Contato', path: '/contato' },
     ];
 
@@ -92,6 +85,8 @@ const Navbar = () => {
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-8">
                         <Link to="/" className="text-slate-600 hover:text-institutional-blue font-medium transition-colors">Home</Link>
+                        <Link to="/quem-somos" className="text-slate-600 hover:text-institutional-blue font-medium transition-colors">Quem Somos</Link>
+                        <Link to="/pilares" className="text-slate-600 hover:text-institutional-blue font-medium transition-colors">Pilares</Link>
 
                         {/* Programas Dropdown */}
                         <div
@@ -168,7 +163,9 @@ const Navbar = () => {
             {isOpen && (
                 <div className="md:hidden bg-white border-b border-slate-100 max-h-[80vh] overflow-y-auto">
                     <div className="px-4 pt-2 pb-6 space-y-2">
-                        <Link to="/" className="block px-4 py-3 text-slate-600 font-medium">Home</Link>
+                        <Link to="/" className="block px-4 py-3 text-slate-600 font-medium" onClick={() => setIsOpen(false)}>Home</Link>
+                        <Link to="/quem-somos" className="block px-4 py-3 text-slate-600 font-medium" onClick={() => setIsOpen(false)}>Quem Somos</Link>
+                        <Link to="/pilares" className="block px-4 py-3 text-slate-600 font-medium" onClick={() => setIsOpen(false)}>Pilares</Link>
 
                         {/* Programas Mobile */}
                         <div className="px-4 py-3 font-bold text-institutional-blue bg-slate-50 rounded-xl">Programas</div>

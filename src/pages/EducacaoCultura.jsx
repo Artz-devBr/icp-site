@@ -7,13 +7,20 @@
 // Fazer o Pull Request para o repositório original.
 
 import React from 'react';
+import {
+    BookOpen, BookOpenCheck, Monitor, Bot, Brain, Trophy,
+    Palette, Music, Music2, Library, Landmark, GraduationCap,
+    Smartphone, Briefcase, Heart, Handshake, Sparkles, Clock,
+    Camera, ClipboardCheck, CheckCircle2, Drama, Cpu, CalendarDays, MapPin,
+    Video, BarChart3, Wrench, Target
+} from 'lucide-react';
 import Template from './Template';
 
 // Imagens da galeria
-import salaAula from '../assets/Educacao/sala-aula.jpg';
-import informaticaCurso from '../assets/Educacao/informatica-curso.jpg';
-import programacaoAula from '../assets/Educacao/programacao-aula.jpg';
-import roboticaInstitucional from '../assets/Educacao/robotica-institucional.jpg';
+import salaAula from '../assets/icp-logo-transparencia.jpg';
+import informaticaCurso from '../assets/icp-logo-transparencia.jpg';
+import programacaoAula from '../assets/icp-logo-transparencia.jpg';
+import roboticaInstitucional from '../assets/icp-logo-transparencia.jpg';
 
 // Estilos CSS para efeito de folha de caderno
 const notebookStyles = {
@@ -95,7 +102,7 @@ const NotebookCard = ({ icon, title, description, color, variant = 'education' }
 );
 
 const Educacao = () => (
-    <Template title="Educação">
+    <Template title="Educação e Cultura">
         <div className="space-y-6">
 
             <div className="max-w-6xl mx-auto space-y-16">
@@ -110,11 +117,7 @@ const Educacao = () => (
                 </header>
 
                 {/* 2. Estatísticas de Impacto */}
-                <section className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                    <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl">
-                        <span className="text-4xl font-bold text-blue-600">18+</span>
-                        <p className="text-slate-600 mt-2 text-sm">Anos Transformando Vidas</p>
-                    </div>
+                <section className="grid grid-cols-2 md:grid-cols-3 gap-6">
                     <div className="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-2xl">
                         <span className="text-4xl font-bold text-green-600">500+</span>
                         <p className="text-slate-600 mt-2 text-sm">Alunos Atendidos por Ano</p>
@@ -131,40 +134,43 @@ const Educacao = () => (
 
                 {/* 3. Grid de Projetos Educacionais - Estilo Caderno */}
                 <section>
-                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8">📚 Nossos Projetos Educacionais</h2>
+                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8 flex items-center justify-center gap-3">
+                        <BookOpen className="w-8 h-8 text-institutional-blue" />
+                        Nossos Projetos Educacionais
+                    </h2>
                     <div className="grid md:grid-cols-3 gap-8">
                         <NotebookCard
-                            icon="📖"
+                            icon={<GraduationCap className="w-6 h-6" />}
                             title="Reforço Escolar"
                             description="Acompanhamento pedagógico individualizado para crianças da rede pública no contraturno escolar, focando em matemática, português e ciências."
                             color="bg-blue-100 text-blue-600"
                         />
                         <NotebookCard
-                            icon="💻"
+                            icon={<Monitor className="w-6 h-6" />}
                             title="Informática e Tecnologia"
                             description="Cursos de informática para todas as idades: Descomplicando o Celular, WhatsApp, Canva, CapCut, Instagram e criação de conteúdos digitais."
                             color="bg-green-100 text-green-600"
                         />
                         <NotebookCard
-                            icon="🤖"
+                            icon={<Cpu className="w-6 h-6" />}
                             title="Robótica e Programação"
                             description="Em parceria com FIRJAN e VALE, oferecemos cursos de Robótica Fab Lab para crianças de 8 a 15 anos e Programação para jovens de 16 a 24 anos."
                             color="bg-purple-100 text-purple-600"
                         />
                         <NotebookCard
-                            icon="🎭"
+                            icon={<Drama className="w-6 h-6" />}
                             title="Teatro e Musicalização"
                             description="Oficinas de teatro e musicalização infantil que estimulam a criatividade, expressão artística e desenvolvimento socioemocional das crianças."
                             color="bg-pink-100 text-pink-600"
                         />
                         <NotebookCard
-                            icon="🧠"
+                            icon={<Brain className="w-6 h-6" />}
                             title="Inteligência Artificial"
                             description="Oficina de IA para jovens e adultos, preparando nossa comunidade para as tecnologias do futuro e ampliando oportunidades no mercado de trabalho."
                             color="bg-cyan-100 text-cyan-600"
                         />
                         <NotebookCard
-                            icon="♟️"
+                            icon={<Trophy className="w-6 h-6" />}
                             title="Xadrez Educativo"
                             description="Oficina de xadrez que desenvolve raciocínio lógico, concentração, planejamento estratégico e tomada de decisões em crianças e jovens."
                             color="bg-amber-100 text-amber-600"
@@ -174,7 +180,10 @@ const Educacao = () => (
 
                 {/* 4. Seção de Cultura */}
                 <section>
-                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8">🎭 Cultura e Expressão Artística</h2>
+                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8 flex items-center justify-center gap-3">
+                        <Palette className="w-8 h-8 text-institutional-blue" />
+                        Cultura e Expressão Artística
+                    </h2>
                     <p className="text-center text-slate-600 max-w-2xl mx-auto mb-8">
                         Valorizamos a cultura como elemento essencial para o desenvolvimento humano.
                         Através de atividades artísticas e culturais, estimulamos o pensamento crítico,
@@ -182,42 +191,42 @@ const Educacao = () => (
                     </p>
                     <div className="grid md:grid-cols-3 gap-8">
                         <NotebookCard
-                            icon="🎭"
+                            icon={<Drama className="w-6 h-6" />}
                             title="Teatro"
                             description="Oficinas de teatro que desenvolvem expressão corporal, oratória, trabalho em equipe e autoconfiança através das artes cênicas."
                             color="bg-rose-100 text-rose-600"
                             variant="culture"
                         />
                         <NotebookCard
-                            icon="🎵"
+                            icon={<Music className="w-6 h-6" />}
                             title="Musicalização"
                             description="Aulas de música e musicalização infantil que despertam a sensibilidade artística, ritmo e coordenação motora nas crianças."
                             color="bg-violet-100 text-violet-600"
                             variant="culture"
                         />
                         <NotebookCard
-                            icon="💃"
+                            icon={<Music2 className="w-6 h-6" />}
                             title="Dança"
                             description="Oficinas de dança que promovem expressão corporal, condicionamento físico e valorização da cultura brasileira."
                             color="bg-fuchsia-100 text-fuchsia-600"
                             variant="culture"
                         />
                         <NotebookCard
-                            icon="🎨"
+                            icon={<Palette className="w-6 h-6" />}
                             title="Artes Visuais"
                             description="Oficinas de desenho, pintura e isogravura que estimulam a criatividade e expressão artística em todas as idades."
                             color="bg-indigo-100 text-indigo-600"
                             variant="culture"
                         />
                         <NotebookCard
-                            icon="📚"
+                            icon={<Library className="w-6 h-6" />}
                             title="Literatura e Leitura"
                             description="Biblioteca comunitária com mais de 2.000 livros, rodas de leitura e contação de histórias para crianças."
                             color="bg-emerald-100 text-emerald-600"
                             variant="culture"
                         />
                         <NotebookCard
-                            icon="🏛️"
+                            icon={<Landmark className="w-6 h-6" />}
                             title="História de Itaguaí"
                             description="Palestras e atividades que resgatam e preservam a memória histórica e cultural do município de Itaguaí."
                             color="bg-amber-100 text-amber-600"
@@ -243,11 +252,14 @@ const Educacao = () => (
                         <div className="w-4 h-4 rounded-full bg-slate-200 border-2 border-slate-300"></div>
                     </div>
 
-                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8 pl-6">🎓 Programação de Férias 2026</h2>
+                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8 pl-6 flex items-center justify-center gap-3">
+                        <CalendarDays className="w-8 h-8 text-institutional-blue" />
+                        Programação de Férias 2026
+                    </h2>
                     <div className="grid md:grid-cols-3 gap-6 pl-6">
                         <div className="bg-white/80 backdrop-blur p-6 rounded-2xl border border-slate-200">
                             <h4 className="font-bold text-blue-700 mb-3 flex items-center gap-2">
-                                <span className="text-xl">📱</span> Tecnologia Digital
+                                <Smartphone className="w-5 h-5" /> Tecnologia Digital
                             </h4>
                             <ul className="text-slate-600 text-sm space-y-2">
                                 <li>• Descomplicando o Celular</li>
@@ -260,7 +272,7 @@ const Educacao = () => (
                         </div>
                         <div className="bg-white/80 backdrop-blur p-6 rounded-2xl border border-slate-200">
                             <h4 className="font-bold text-green-700 mb-3 flex items-center gap-2">
-                                <span className="text-xl">💼</span> Empreendedorismo
+                                <Briefcase className="w-5 h-5" /> Empreendedorismo
                             </h4>
                             <ul className="text-slate-600 text-sm space-y-2">
                                 <li>• Oficina de Biscoitos</li>
@@ -273,7 +285,7 @@ const Educacao = () => (
                         </div>
                         <div className="bg-white/80 backdrop-blur p-6 rounded-2xl border border-slate-200">
                             <h4 className="font-bold text-purple-700 mb-3 flex items-center gap-2">
-                                <span className="text-xl">🎨</span> Cultura e Bem-Estar
+                                <Palette className="w-5 h-5" /> Cultura e Bem-Estar
                             </h4>
                             <ul className="text-slate-600 text-sm space-y-2">
                                 <li>• Oficina de Teatro</li>
@@ -285,14 +297,17 @@ const Educacao = () => (
                             </ul>
                         </div>
                     </div>
-                    <p className="text-center text-slate-500 text-sm mt-6 pl-6">
-                        📍 Atividades presenciais • A partir de 6 anos • Prioridade para moradores em vulnerabilidade social
+                    <p className="text-center text-slate-500 text-sm mt-6 pl-6 flex items-center justify-center gap-2">
+                        <MapPin className="w-4 h-4" /> Atividades presenciais • A partir de 6 anos • Prioridade para moradores em vulnerabilidade social
                     </p>
                 </section>
 
                 {/* 5. Parcerias */}
                 <section>
-                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8">🤝 Parcerias Estratégicas</h2>
+                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8 flex items-center justify-center gap-3">
+                        <Handshake className="w-8 h-8 text-institutional-blue" />
+                        Parcerias Estratégicas
+                    </h2>
                     <div className="grid md:grid-cols-2 gap-8">
                         <div
                             className="p-8 rounded-2xl relative"
@@ -307,9 +322,18 @@ const Educacao = () => (
                             </div>
                             <h3 className="text-xl font-bold text-slate-800 mb-4 pl-4">FIRJAN</h3>
                             <ul className="text-slate-600 text-sm space-y-2 pl-4" style={{ lineHeight: '28px' }}>
-                                <li>📹 Desenvolvedor de Conteúdos para YouTube</li>
-                                <li>📊 Assistente de Marketing Digital</li>
-                                <li>🔧 Robótica Fab Lab</li>
+                                <li className="flex items-center gap-2">
+                                    <Video className="w-4 h-4 text-institutional-blue" />
+                                    Desenvolvedor de Conteúdos para YouTube
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <BarChart3 className="w-4 h-4 text-institutional-blue" />
+                                    Assistente de Marketing Digital
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <Wrench className="w-4 h-4 text-institutional-blue" />
+                                    Robótica Fab Lab
+                                </li>
                             </ul>
                         </div>
                         <div
@@ -325,9 +349,18 @@ const Educacao = () => (
                             </div>
                             <h3 className="text-xl font-bold text-slate-800 mb-4 pl-4">VALE</h3>
                             <ul className="text-slate-600 text-sm space-y-2 pl-4" style={{ lineHeight: '28px' }}>
-                                <li>🤖 Robótica (8 a 15 anos)</li>
-                                <li>💻 Programação (16 a 24 anos)</li>
-                                <li>🎯 Capacitação profissional</li>
+                                <li className="flex items-center gap-2">
+                                    <Bot className="w-4 h-4 text-institutional-blue" />
+                                    Robótica (8 a 15 anos)
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <Monitor className="w-4 h-4 text-institutional-blue" />
+                                    Programação (16 a 24 anos)
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <Target className="w-4 h-4 text-institutional-blue" />
+                                    Capacitação profissional
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -335,31 +368,42 @@ const Educacao = () => (
 
                 {/* 6. Diferenciais */}
                 <section className="bg-gradient-to-r from-slate-50 to-slate-100 rounded-3xl p-10">
-                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8">✨ Por que escolher o Instituto Casa do Pai?</h2>
+                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8 flex items-center justify-center gap-3">
+                        <Sparkles className="w-8 h-8 text-institutional-blue" />
+                        Por que escolher o Instituto Casa do Pai?
+                    </h2>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="flex items-start gap-4">
-                            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white flex-shrink-0">✓</div>
+                            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                                <CheckCircle2 className="w-6 h-6" />
+                            </div>
                             <div>
                                 <h4 className="font-bold text-slate-800">Ensino 100% Gratuito</h4>
                                 <p className="text-slate-600 text-sm">Todos os cursos e oficinas são completamente gratuitos para a comunidade.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
-                            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white flex-shrink-0">✓</div>
+                            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                                <CheckCircle2 className="w-6 h-6" />
+                            </div>
                             <div>
                                 <h4 className="font-bold text-slate-800">Parcerias de Excelência</h4>
                                 <p className="text-slate-600 text-sm">Cursos em parceria com FIRJAN e VALE, com certificação reconhecida.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
-                            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white flex-shrink-0">✓</div>
+                            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                                <CheckCircle2 className="w-6 h-6" />
+                            </div>
                             <div>
                                 <h4 className="font-bold text-slate-800">Todas as Idades</h4>
                                 <p className="text-slate-600 text-sm">Programas para crianças a partir de 6 anos, jovens, adultos e idosos.</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-4">
-                            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white flex-shrink-0">✓</div>
+                            <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white flex-shrink-0">
+                                <CheckCircle2 className="w-6 h-6" />
+                            </div>
                             <div>
                                 <h4 className="font-bold text-slate-800">Inclusão Digital</h4>
                                 <p className="text-slate-600 text-sm">Foco em preparar a comunidade para o mercado de trabalho digital.</p>
@@ -370,7 +414,10 @@ const Educacao = () => (
 
                 {/* 7. Horários de Funcionamento */}
                 <section className="bg-white rounded-3xl p-10 shadow-sm border border-slate-100">
-                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8">🕐 Horários das Atividades</h2>
+                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8 flex items-center justify-center gap-3">
+                        <Clock className="w-8 h-8 text-institutional-blue" />
+                        Horários das Atividades
+                    </h2>
                     <div className="grid md:grid-cols-3 gap-6 text-center">
                         <div className="p-6 bg-slate-50 rounded-2xl">
                             <h4 className="font-bold text-slate-800 mb-2">Manhã</h4>
@@ -388,14 +435,17 @@ const Educacao = () => (
                             <p className="text-blue-600 text-sm mt-2">Cursos para Jovens e Adultos</p>
                         </div>
                     </div>
-                    <p className="text-center text-slate-500 text-sm mt-6">
-                        📅 Segunda a Sexta: 8h às 18h | Sábado: 8h às 13h
+                    <p className="text-center text-slate-500 text-sm mt-6 flex items-center justify-center gap-2">
+                        <CalendarDays className="w-4 h-4" /> Segunda a Sexta: 8h às 18h | Sábado: 8h às 13h
                     </p>
                 </section>
 
                 {/* 8. Galeria de Fotos */}
                 <section>
-                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8">📸 Nossas Atividades em Ação</h2>
+                    <h2 className="text-2xl font-bold text-slate-800 text-center mb-8 flex items-center justify-center gap-3">
+                        <Camera className="w-8 h-8 text-institutional-blue" />
+                        Nossas Atividades em Ação
+                    </h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         <div className="relative group overflow-hidden rounded-2xl aspect-square">
                             <img
@@ -442,7 +492,10 @@ const Educacao = () => (
 
                 {/* 9. Como se Inscrever */}
                 <section className="text-center">
-                    <h2 className="text-2xl font-bold text-slate-800 mb-4">📝 Como se Inscrever</h2>
+                    <h2 className="text-2xl font-bold text-slate-800 mb-4 flex items-center justify-center gap-3">
+                        <ClipboardCheck className="w-8 h-8 text-institutional-blue" />
+                        Como se Inscrever
+                    </h2>
                     <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
                         As inscrições estão abertas! Para participar de nossos programas educacionais,
                         compareça à nossa sede com os documentos necessários ou entre em contato:
@@ -460,12 +513,6 @@ const Educacao = () => (
                             <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold text-xl mb-3">3</div>
                             <p className="text-slate-600 text-sm">Declaração escolar (menores)</p>
                         </div>
-                    </div>
-                    <div className="bg-slate-50 rounded-2xl p-6 max-w-md mx-auto">
-                        <p className="text-slate-700 font-medium">📍 R. Pref. José Maria de Brito, 201</p>
-                        <p className="text-slate-600 text-sm">Monte Serrat, Itaguaí - RJ</p>
-                        <p className="text-blue-600 font-medium mt-2">📞 (21) 98227-4600</p>
-                        <p className="text-blue-600 text-sm">contato@institutocasadopai.org.br</p>
                     </div>
                 </section>
 

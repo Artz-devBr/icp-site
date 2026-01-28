@@ -55,14 +55,14 @@ const Footer = () => {
                     <div className="space-y-6">
                         <h3 className="text-white font-bold text-lg">Contato</h3>
                         <div className="space-y-4 text-sm">
-                            <a href="tel:2198227460" className="flex items-center gap-3 hover:text-white transition-colors">
-                                <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center">
+                            <a href="tel:2198227460" className="flex items-center hover:text-white transition-colors">
+                                <div className="w-6 h-8  flex items-center">
                                     <Phone className="w-4 h-4 text-institutional-orange" />
                                 </div>
                                 (21) 98227-460
                             </a>
-                            <a href="mailto:contato@institutocasadopai.org.br" className="flex items-center gap-3 hover:text-white transition-colors">
-                                <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center">
+                            <a href="mailto:contato@institutocasadopai.org.br" className="flex items-center hover:text-white transition-colors">
+                                <div className="w-8 h-8  flex items-center">
                                     <Mail className="w-4 h-4 text-institutional-orange" />
                                 </div>
                                 contato@institutocasadopai.org.br

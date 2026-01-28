@@ -2,7 +2,7 @@ import React, { useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import { Heart, Users, BookOpen, Utensils, Pointer } from 'lucide-react';
+import { Heart, Users, BookOpen, PawPrint, Pointer } from 'lucide-react';
 import heroImage from '../assets/home/background.avif';
 import governoBrasil from '../assets/home/governodobrasil.png';
 import governoRJ from '../assets/home/governodorj.png';
@@ -148,9 +148,9 @@ const Home = () => {
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <Counter end={1200} label="Refeições/Mês" icon={Utensils} color="bg-orange-500" />
-                        <Counter end={350} label="Alunos" icon={BookOpen} color="bg-blue-600" />
-                        <Counter end={45} label="Voluntários" icon={Users} color="bg-purple-600" />
+                        <Counter end={18} label="Anos Transformando Vidas" icon={Users} color="bg-orange-500" />
+                        <Counter end={1200} label="Castrações" icon={PawPrint} color="bg-green-500" />
+                        <Counter end={18000} label="Pessoas Impactadas" icon={BookOpen} color="bg-blue-600" />
                         <Counter end={12} label="Projetos Ativos" icon={Heart} color="bg-pink-500" />
                     </div>
                 </div>
@@ -202,32 +202,27 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Actions Summary */}
+            {/* Instagram Section */}
             <section className="py-24 bg-white relative z-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                        <div className="space-y-6 section-title">
-                            <h2 className="text-3xl md:text-4xl font-bold text-institutional-blue">
-                                Uma ponte entre quem quer ajudar e quem precisa.
-                            </h2>
-                            <p className="text-lg text-slate-600 leading-relaxed">
-                                No ICP, acreditamos que a mudança real acontece quando a comunidade se une. Nossos projetos abrangem desde educação infantil até cursos profissionalizantes para jovens e adultos.
-                            </p>
-                            <ul className="space-y-4">
-                                {['Impacto Social Direto', 'Transparência Total', 'Eficiência em Gestão'].map((item) => (
-                                    <li key={item} className="flex items-center space-x-3 text-slate-700 font-medium">
-                                        <div className="w-2 h-2 bg-institutional-orange rounded-full"></div>
-                                        <span>{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="bg-institutional-blue rounded-[3rem] p-12 text-white relative overflow-hidden section-title">
-                            <div className="relative z-10">
-                                <h3 className="text-3xl font-bold mb-6 italic">"Ninguém é tão pobre que não possa dar, nem tão rico que não possa receber."</h3>
-                                <p className="text-blue-100">— Princípio ICP</p>
-                            </div>
-                            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
+                    <div className="text-center mb-16 section-title">
+                        <h2 className="text-3xl md:text-5xl font-bold text-institutional-blue mb-4">
+                            Acompanhe no Instagram
+                        </h2>
+                        <p className="text-lg text-slate-500">
+                            Fique por dentro das nossas ações diárias e histórias de impacto.
+                        </p>
+                    </div>
+
+                    <div className="flex justify-center">
+                        <div className="w-full max-w-2xl p-4 md:p-8">
+                            <iframe
+                                src="https://www.instagram.com/instituto_casadopai/embed"
+                                className="w-full h-[600px] rounded-2xl"
+                                frameBorder="0"
+                                scrolling="no"
+                                allowtransparency="true"
+                            ></iframe>
                         </div>
                     </div>
                 </div>

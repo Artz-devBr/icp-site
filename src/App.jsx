@@ -4,10 +4,10 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import {
-  QuemSomos, Educacao, Esportes, Castracao,
-  ApoioPsicologico, Cursos, Transparencia,
+  QuemSomos, Castracao,
+  ApoioPsicologico, Transparencia,
   Doar, Eventos, Editais, Parceiros, Contato,
-  Empreendedorismo, EducacaoCultura, Tecnologia, EsporteSaude
+  Empreendedorismo, EducacaoCultura, Tecnologia, EsporteSaude, Pilares
 } from './pages';
 import { useEffect } from 'react';
 
@@ -22,7 +22,7 @@ const ScrollToTop = () => {
 
 function App() {
   return (
-    <Router>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ScrollToTop />
       <div className="min-h-screen bg-social-clean selection:bg-institutional-orange/30 selection:text-institutional-blue">
         <Navbar />
@@ -30,11 +30,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/quem-somos" element={<QuemSomos />} />
-            <Route path="/educacao" element={<Educacao />} />
-            <Route path="/esportes" element={<Esportes />} />
+            <Route path="/pilares" element={<Pilares />} />
             <Route path="/castracao" element={<Castracao />} />
             <Route path="/apoio-psicologico" element={<ApoioPsicologico />} />
-            <Route path="/cursos" element={<Cursos />} />
             <Route path="/transparencia" element={<Transparencia />} />
             <Route path="/doar" element={<Doar />} />
             <Route path="/eventos" element={<Eventos />} />
