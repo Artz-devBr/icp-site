@@ -47,19 +47,19 @@ const EsporteSaude = () => {
             // Sport cards - Using batch for better grid reliability
             ScrollTrigger.batch(".sport-card", {
                 onEnter: batch => gsap.fromTo(batch,
-                    { opacity: 0, y: 50 },
-                    { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: "power3.out", overwrite: true }
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power2.out", overwrite: true, clearProps: "transform" }
                 ),
-                start: "top 85%"
+                start: "top 90%"
             });
 
             // Benefits cards - Using batch
             ScrollTrigger.batch(".benefit-card", {
                 onEnter: batch => gsap.fromTo(batch,
-                    { opacity: 0, y: 40 },
-                    { opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: "power3.out", overwrite: true }
+                    { opacity: 0, y: 30 },
+                    { opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: "power2.out", overwrite: true, clearProps: "transform" }
                 ),
-                start: "top 85%"
+                start: "top 90%"
             });
 
             // Gallery images - Using batch
@@ -207,7 +207,7 @@ const EsporteSaude = () => {
                         {sports.map((sport, index) => (
                             <div
                                 key={index}
-                                className="sport-card bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 hover:shadow-xl hover:shadow-slate-200 transition-all duration-300 group"
+                                className="sport-card opacity-0 bg-white rounded-[2rem] overflow-hidden border border-slate-100 hover:shadow-2xl hover:shadow-blue-900/10 transition-shadow duration-500 group flex flex-col"
                             >
                                 <div className="relative h-56 overflow-hidden">
                                     <img
@@ -248,7 +248,7 @@ const EsporteSaude = () => {
                         {benefits.map((benefit, index) => (
                             <div
                                 key={index}
-                                className="benefit-card flex items-start space-x-6 p-8 bg-slate-50 rounded-3xl border border-slate-100"
+                                className="benefit-card opacity-0 flex items-start space-x-6 p-8 bg-slate-50 rounded-[2rem] border border-slate-100 shadow-sm"
                             >
                                 <div className={`flex-shrink-0 w-14 h-14 ${benefit.color} rounded-2xl flex items-center justify-center text-white shadow-lg`}>
                                     <benefit.icon className="w-7 h-7" />
