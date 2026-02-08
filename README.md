@@ -1,16 +1,33 @@
-# React + Vite
+🤡 API Piadas - Curadoria & Entretenimento
+Este projeto é uma aplicação Fullstack desenvolvida para gerenciar e exibir piadas de forma dinâmica, com um foco rigoroso na organização de código e segurança de conteúdo.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+🚀 Sobre o Projeto
+A aplicação permite o consumo de piadas armazenadas em um banco de dados, contando com uma interface intuitiva e um sistema de backend robusto. O principal diferencial técnico foi a implementação do padrão MVC (Model-View-Controller) para garantir que o sistema seja fácil de manter e escalar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Principais Funcionalidades:
 
-## Expanding the ESLint configuration
+Curadoria de Conteúdo: Implementação de um filtro de validação para garantir que as piadas enviadas sejam adequadas e seguras antes de serem armazenadas.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Navegação Dinâmica: Recuperação automática e assíncrona de novas piadas do banco de dados ao interagir com a interface.
+
+
+Arquitetura MVC: Separação clara entre a lógica de dados, a interface do usuário e o controle de rotas.
+
+
+Integração com Banco de Dados: Persistência de dados para armazenamento e consulta eficiente de informações.
+
+🛠️ Tecnologias Utilizadas
+
+Backend: Node.js e JavaScript (ES6+).
+
+
+
+Padrão de Arquitetura: MVC (Model-View-Controller).
+
+Frontend: HTML, CSS e JavaScript para interação em tempo real.
+
+Hospedagem: Vercel (conforme visualizado em api-piadas-one.vercel.app).
+!!!!EM CASO DE ERROR O SUPABASE MORREU!!!
