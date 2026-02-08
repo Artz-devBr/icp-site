@@ -1,5 +1,3 @@
-Aqui tens o foco exclusivo no Front-end para o teu projeto do Instituto Casa do Pai (ICP), destacando a interface e a experiência do utilizador:
-
 💻 Front-end: Interface & Experiência do Utilizador
 O desenvolvimento visual do portal do Instituto Casa do Pai foi focado em criar uma jornada intuitiva e moderna, garantindo que a missão social e os cursos do Polo Tecnológico sejam comunicados com clareza e impacto visual.
 
