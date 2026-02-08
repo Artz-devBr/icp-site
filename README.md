@@ -1,33 +1,19 @@
-🤡 API Piadas - Curadoria & Entretenimento
-Este projeto é uma aplicação Fullstack desenvolvida para gerenciar e exibir piadas de forma dinâmica, com um foco rigoroso na organização de código e segurança de conteúdo.
+Aqui tens o foco exclusivo no Front-end para o teu projeto do Instituto Casa do Pai (ICP), destacando a interface e a experiência do utilizador:
 
+💻 Front-end: Interface & Experiência do Utilizador
+O desenvolvimento visual do portal do Instituto Casa do Pai foi focado em criar uma jornada intuitiva e moderna, garantindo que a missão social e os cursos do Polo Tecnológico sejam comunicados com clareza e impacto visual.
 
-🚀 Sobre o Projeto
-A aplicação permite o consumo de piadas armazenadas em um banco de dados, contando com uma interface intuitiva e um sistema de backend robusto. O principal diferencial técnico foi a implementação do padrão MVC (Model-View-Controller) para garantir que o sistema seja fácil de manter e escalar.
+🛠️ Stack Tecnológica
 
+React.js & Vite: Utilizados para criar uma aplicação de alto desempenho (SPA), com carregamento instantâneo e uma arquitetura baseada em componentes reutilizáveis.
 
+Tailwind CSS: Implementação de um design personalizado e profissional, focado na consistência visual e na rapidez de estilização.
 
-Principais Funcionalidades:
+✨ Diferenciais de Interface (UI/UX)
+Design Responsivo (Mobile First): A interface foi projetada para ser totalmente funcional em telemóveis, tablets e computadores, garantindo que o utilizador tenha a melhor experiência em qualquer ecrã.
 
-Curadoria de Conteúdo: Implementação de um filtro de validação para garantir que as piadas enviadas sejam adequadas e seguras antes de serem armazenadas.
+Performance & SEO: Código otimizado para motores de busca (Google), garantindo que o instituto seja facilmente encontrado por novos parceiros e potenciais alunos.
 
-Navegação Dinâmica: Recuperação automática e assíncrona de novas piadas do banco de dados ao interagir com a interface.
+Navegação Intuitiva: Estrutura de menus e botões de ação (CTAs) estrategicamente posicionados para converter visitantes em interessados nos projetos sociais.
 
-
-Arquitetura MVC: Separação clara entre a lógica de dados, a interface do usuário e o controle de rotas.
-
-
-Integração com Banco de Dados: Persistência de dados para armazenamento e consulta eficiente de informações.
-
-🛠️ Tecnologias Utilizadas
-
-Backend: Node.js e JavaScript (ES6+).
-
-
-
-Padrão de Arquitetura: MVC (Model-View-Controller).
-
-Frontend: HTML, CSS e JavaScript para interação em tempo real.
-
-Hospedagem: Vercel (conforme visualizado em api-piadas-one.vercel.app).
-!!!!EM CASO DE ERROR O SUPABASE MORREU!!!
+Fidelidade Visual: Uso de imagens de alta qualidade e tipografia moderna para refletir a autoridade da parceria com a VALE.
